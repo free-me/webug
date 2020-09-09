@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEB登录</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/material-bootstrap-wizard.css" rel="stylesheet" />
+    <!--   Core JS Files   -->
+    <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.bootstrap.js" type="text/javascript"></script>
+
+    <!--  Plugin for the Wizard -->
+    <script src="js/material-bootstrap-wizard.js"></script>
+
+    <script src="js/jquery.validate.min.js"></script>
+</head>
+<body>
+<br><br>
+<div class="col-md-offset-4 col-lg-offset-4col-xl-offset-4">
+<h1 class="table-hover">登录成功后获取flag</h1>
+</div>
+<div class="col-md-offset-4 col-lg-offset-4col-xl-offset-4">
+    <form class="form-inline" action="do.php" method="post">
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">请输入校验字符串</label>
+            <div class="input-group">
+                <div class="input-group-addon">用户名：</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="name" name="username">
+                <div class="input-group-addon">密码：</div>
+                <input type="password" class="form-control" id="exampleInputAmount" placeholder="password" name="password">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">登录</button>
+    </form>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+        <div class="col-xs-16 col-md-8">
+    <div class="container text-center">
+        Copyright By <a href="http://qingdao.chinatax.gov.cn/">青岛市税务局</a>
+    </div>
+</div>
+</div>
+</nav>
+</div>
+</body>
+</html>

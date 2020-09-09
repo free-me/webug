@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEB登录</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/material-bootstrap-wizard.css" rel="stylesheet" />
+    <!--   Core JS Files   -->
+    <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.bootstrap.js" type="text/javascript"></script>
+
+    <!--  Plugin for the Wizard -->
+    <script src="js/material-bootstrap-wizard.js"></script>
+
+    <script src="js/jquery.validate.min.js"></script>
+</head>
+<body>
+<br><br>
+<div class="col-md-offset-4 col-lg-offset-4col-xl-offset-4">
+<h1 class="table-hover">尝试直接登录</h1>
+</div>
+<div class="col-md-offset-4 col-lg-offset-4col-xl-offset-4">
+    <form class="form-inline" action="do.php">
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">请输入校验字符串</label>
+            <div class="input-group">
+                <div class="input-group-addon">校验码：</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="msg" name="msg">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">认证</button>
+    </form>
+</div>
+<div class="col-md-offset-4 col-lg-offset-4col-xl-offset-4">
+    <h3>需要根据如下代码考虑如何获取flag：</h3>
+    <sample class="col-lg-8">
+        $md51 = md5('QNKCDZO');<br>
+$a = @$_GET['msg'];<br>
+$md52 = md5($a); #$md52等于输入的a经过md5加密后的数<br>
+if(isset($msg))<br>
+{ if ($a != 'QNKCDZO' && $md51 == $md52)#a不等于QNKCDZO，但是等于QNKCDZO加密后的数
+<br>{ echo "flag{*****************}"; }<br>
+else { echo "登录失败"; }}<br>
+else{echo "需要输入msg";}<br>
+    </sample>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+        <div class="col-xs-16 col-md-8">
+    <div class="container text-center">
+        Copyright By <a href="http://qingdao.chinatax.gov.cn/">青岛市税务局</a>
+    </div>
+</div>
+</div>
+</nav>
+</div>
+</body>
+</html>
